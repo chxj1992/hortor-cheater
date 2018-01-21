@@ -13,7 +13,10 @@ def response(flow):
         question = data['data']['quiz']
         options = data['data']['options']
         ctx.log.info('question : %s, options : %s'%(question, options))
-        ask(question, options)
+        options = ask(question, options)
+        data['data']['options'] = options
+        flow.response.text = json.dumps(data)
+
 
 
 def ask(question, options):
@@ -34,4 +37,6 @@ def ask(question, options):
             count[i] += content.count(option)
     for i,option in enumerate(options):
         ctx.log.info('option : %s, count : %s'%(option, count[i]))
+        options[i] = options[i] + ':' + str(count[i])
         # print("option: %s, count: %s"%(option, count))
+    return options
