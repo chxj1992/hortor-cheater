@@ -15,8 +15,11 @@ $ python mitmproxy -p 8129  -s listen.py
 
 ![](screenshot3.png)
 
+选项在搜索结果中出现的次数, 会显示在选项最后
 
-输入 "e" 查看日志
+![](screenshot4.jpg)
+
+或者, 输入 "e" 查看日志可以提前看到答案
 
 ![](screenshot2.png)
 
