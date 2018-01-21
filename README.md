@@ -8,7 +8,7 @@
 运行程序:
 
 ```bash
-$ python mitmproxy -p 8129  -s listen.py
+$ mitmproxy -p 8129  -s listen.py
 ```
 
 打开 `http://mitm.it` 下载并安装证书, 并设置设备的手动代理到相应地址(eg. 192.168.2.235:8129)
